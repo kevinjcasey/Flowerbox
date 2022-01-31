@@ -1,0 +1,168 @@
+
+/* text-transform: uppercase; */
+/* set images to display: block to get rid of spacing between text */
+
+/* font-family: 'DM Sans', sans-serif; */
+/* font-family: 'Open Sans', sans-serif; */
+
+body {
+    padding: 1rem; /* <-- monitor this */
+    box-sizing: border-box;
+    background-color: whitesmoke;
+}
+
+.card-img {
+    width: 100%;
+}
+
+/* ========= Header ======== */
+
+/* none of my flex options seem to work on this???  */
+header {
+    font-family: 'DM Sans', sans-serif;
+    color: whitesmoke;
+    font-weight: 900;
+    background-color: #92b2ba;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+/* or this??? */
+.nav-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* ======== Banner section ======== */
+
+h1 {
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 60px;
+    color: #92b2ba;
+    text-shadow: 2px 2px white;
+}
+
+/* could not get this to how I wanted it. White background always blocked image.  */
+h3 {
+    width: 90%;
+    margin: 0 auto;
+    padding: 3px;
+    text-align: right;
+    font-family: 'DM Sans', sans-serif;
+    color: #f0a8bb;
+    /* background-color: whitesmoke; */
+}
+
+/* help from Joey K with this code, specifically the width, height calc and background-size and repeat properties */
+.banner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url(./imgs/banner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    width: 85vw;
+    height: calc(85vw / 2.5); /* this is calculated by looking up the pixel dimensions of the actual img */
+}
+
+/* ====== Cards section  ====== */
+/* ====== (that took hours off my life) ====== */
+
+.card-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    /* height: 80%; <-- neccessary for column-gap? no clue */
+}
+
+.cards div {
+    box-shadow: 3px 3px 3px grey;
+    /* trying to get the card divs to separate horizontally, but not working */
+    column-gap: 10%;
+    margin-bottom: 15px;
+}
+
+.cards > * {
+    flex-flow: row wrap;
+    width: 25%;
+    margin: 0 auto;
+    padding: .5rem;
+    background-color: white;
+    justify-content: space-between;
+}
+
+nav.types {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    justify-content: space-between;
+    background-color: #eeeeee;
+}
+
+/* mess with font sizes on these? */
+li {
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+span {
+    text-align: right;
+    padding: 2px;
+    background-color: #f0a8bb;
+    color: whitesmoke;
+}
+
+h4 {
+    font-family: 'DM Sans', sans-serif;
+    color: #92b2ba;
+}
+
+/* =============== Footer =================== */
+/* could not figure this section out. Spent hours tinkering and researching */
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 15%;
+}
+
+.logo {
+    flex-direction: column;
+}
+
+/* .customer-service {
+
+}
+
+.flower-box {
+
+} */
+
+p {
+    font-family: 'DM Sans', sans-serif;
+    color: #f0a8bb;
+}
+
+.logo-facebook, .logo-twitter, .logo-instagram {
+    color: #92b2ba;
+}
